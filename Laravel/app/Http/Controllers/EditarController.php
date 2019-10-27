@@ -11,7 +11,6 @@ class EditarController extends Controller
     {
        
         return view('editar');
-
     }
 
 }

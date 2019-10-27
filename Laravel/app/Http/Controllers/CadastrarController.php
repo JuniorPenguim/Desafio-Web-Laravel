@@ -52,17 +52,14 @@ class CadastrarController extends Controller
     {
         $this->validate($request, [
 
-            'nome' => 'required',
-            'emprego' => 'required',
-            'email' => 'required',
+            
+            'emprego' => 'required',            
             'senha' => 'required'            
 
         ]);
 
         $usuario = User::find($id);
-        $usuario->name = $request->input('nome');
         $usuario->emprego = $request->input('emprego');
-        $usuario->email = $request->input('email');
         $usuario->password = $request->input('senha');
         $usuario->save();
 

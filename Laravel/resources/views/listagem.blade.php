@@ -25,7 +25,7 @@
         <td> {{ $users->name }} &ensp; </td>
         <td> {{ $users->emprego }} &ensp; </td>
         <td> {{ $users->email }} &ensp; </td>
-        <td> <a href= "{{ url ('/admin/editar/'.$users->id) }}" class= "btn btn-default">Editar</a> </td>
+        <td> <a href= "{{ url ('/admin/editar/'.$users->id) }}" class= "btn btn-warning">Editar</a> </td>
         <td> <a href= "#" class= "btn btn-danger" data-catid={{$users->id}} data-toggle="modal" data-target="#excluir">Excluir</a> </td>
         </tr> 
     
