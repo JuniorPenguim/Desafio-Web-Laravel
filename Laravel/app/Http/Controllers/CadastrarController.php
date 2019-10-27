@@ -70,14 +70,15 @@ class CadastrarController extends Controller
 
     }
 
-    public function destroy($id)
+    public function destroy(Request $request)
     {
 
-        $usuario = User::where('id', $id)->first();
+        $usuario = User::findOrFail($request->usuario_id);
         $usuario->delete();
 
-        return redirect('/admin/listagem');
-
+        return back();
+        
+      
     }
 
 
